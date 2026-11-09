@@ -777,3 +777,77 @@ console.log("Are all students passing?", allPassing);
 // END OF TASK 8.3
 
 
+// ======================================
+// TASK 8.4 - EXERCISE 1: JSON BASICS
+// Created by: Claire Gakuru
+// ======================================
+
+// JSON string
+const json = '{"name":"Claire Gakuru","grades":{"math":88,"english":92}}';
+
+// Convert JSON text into a JavaScript object
+const student = JSON.parse(json);
+
+// Accessing object properties
+console.log("Student name:", student.name);
+
+console.log("Math grade:", student.grades.math);
+
+console.log("English grade:", student.grades.english);
+
+// Convert object back into JSON text
+const backToText = JSON.stringify(student, null, 2);
+
+console.log("JSON text:", backToText);
+
+// Check data type
+console.log("Data type:", typeof backToText);
+
+
+// ======================================
+// TASK 8.4 - EXERCISE 2: WORKING WITH JSON
+// Created by: Claire Gakuru
+// ======================================
+
+// Original JSON string
+const postsJson = '[{"id":1,"title":"Welcome","likes":12,"published":true},{"id":2,"title":"Draft ideas","likes":0,"published":false},{"id":3,"title":"Week 4 recap","likes":30,"published":true}]';
+
+// STEP 1: Parse JSON into an array
+const posts = JSON.parse(postsJson);
+
+console.log("All posts:", posts);
+
+
+// STEP 2: Keep only published posts
+const publishedPosts = posts.filter(post => post.published === true);
+
+console.log("Published posts:", publishedPosts);
+
+
+// STEP 3: Sort by likes (highest first)
+const sortedPosts = [...publishedPosts].sort(
+    (a, b) => b.likes - a.likes
+);
+
+console.log("Posts sorted by likes:", sortedPosts);
+
+
+// STEP 4: Map posts into readable strings
+const postMessages = sortedPosts.map(
+    post => `${post.title} (${post.likes} likes)`
+);
+
+console.log("Post messages:", postMessages);
+
+
+// STEP 5: Convert filtered array back to JSON text
+const filteredJson = JSON.stringify(sortedPosts, null, 2);
+
+console.log("Filtered JSON text:", filteredJson);
+
+
+// STEP 6: Check the data type
+console.log("JSON data type:", typeof filteredJson);
+
+
+
