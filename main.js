@@ -1,4 +1,3 @@
-
 // ======================================
 // WEEK 4: JAVASCRIPT FUNDAMENTALS
 // STUDENT: CLAIRE GAKURU
