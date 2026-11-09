@@ -1,22 +1,222 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claire's JavaScript Practice</title>
+    <meta name="description" content="JavaScript calculator and student grade tracker project.">
+    <title>JavaScript Calculator &amp; Grade Tracker</title>
+    <script src="main.js" defer></script>
 </head>
+
 <body>
 
-    <h1>Welcome to My JavaScript Practice</h1>
+    <header>
+        <h1>JavaScript Practice</h1>
+        <p>Calculator and Student Grade Tracker</p>
+    </header>
 
-    <h2>Claire Wairimu</h2>
+    <main>
 
-    <p>This is my Week 4 JavaScript assignment.</p>
+        <!-- PROJECT 1: STUDENT GRADE TRACKER -->
 
-    <p>Open the browser console to see my JavaScript variables.</p>
+        <section aria-labelledby="tracker-heading">
 
-    <script src="main.js"></script>
+            <h2 id="tracker-heading">Student Grade Tracker</h2>
+
+            <h3>Add a Student</h3>
+
+            <form id="student-form">
+
+                <p>
+                    <label for="new-student-name">Student name:</label>
+                    <input
+                        type="text"
+                        id="new-student-name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="new-student-math">Math grade:</label>
+                    <input
+                        type="number"
+                        id="new-student-math"
+                        min="0"
+                        max="100"
+                        step="any"
+                        placeholder="Enter math grade"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="new-student-english">English grade:</label>
+                    <input
+                        type="number"
+                        id="new-student-english"
+                        min="0"
+                        max="100"
+                        step="any"
+                        placeholder="Enter English grade"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="new-student-science">Science grade:</label>
+                    <input
+                        type="number"
+                        id="new-student-science"
+                        min="0"
+                        max="100"
+                        step="any"
+                        placeholder="Enter science grade"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Add Student</button>
+
+            </form>
+
+            <p id="add-student-message" aria-live="polite"></p>
+
+            <hr>
+
+            <h3>Student Management</h3>
+
+            <form id="search-student-form">
+
+                <p>
+                    <label for="search-student-name">Search student:</label>
+                    <input
+                        type="text"
+                        id="search-student-name"
+                        placeholder="Enter student name"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Get Student Average</button>
+
+                <button type="button" id="show-report-card">
+                    Generate Report Card
+                </button>
+
+            </form>
+
+            <p id="student-result" aria-live="polite"></p>
+
+            <hr>
+
+            <h3>Class Statistics</h3>
+
+            <button type="button" id="show-subject-average">
+                Math Class Average
+            </button>
+
+            <button type="button" id="show-top-student">
+                Top Student
+            </button>
+
+            <button type="button" id="show-struggling-students">
+                Struggling Students
+            </button>
+
+            <p id="class-average" aria-live="polite">
+                Class average: Not calculated
+            </p>
+
+            <p id="top-student" aria-live="polite">
+                Top student: Not calculated
+            </p>
+
+            <p id="struggling-students" aria-live="polite"></p>
+
+            <hr>
+
+            <h3>All Students</h3>
+
+            <button type="button" id="show-students">
+                Show Students
+            </button>
+
+            <ul id="student-list"></ul>
+
+        </section>
+
+
+        <hr>
+
+
+        <!-- PROJECT 2: CALCULATOR -->
+
+        <section aria-labelledby="calculator-heading">
+
+            <h2 id="calculator-heading">Calculator</h2>
+
+            <form id="calculator-form">
+
+                <p>
+                    <label for="number-one">First number:</label>
+                    <input
+                        type="number"
+                        id="number-one"
+                        step="any"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="operator">Operation:</label>
+
+                    <select id="operator">
+
+                        <option value="+">Addition (+)</option>
+
+                        <option value="-">Subtraction (-)</option>
+
+                        <option value="*">Multiplication (*)</option>
+
+                        <option value="/">Division (/)</option>
+
+                        <option value="%">Remainder (%)</option>
+
+                        <option value="**">Power (**)</option>
+
+                    </select>
+                </p>
+
+                <p>
+                    <label for="number-two">Second number:</label>
+                    <input
+                        type="number"
+                        id="number-two"
+                        step="any"
+                        required
+                    >
+                </p>
+
+                <button type="submit">Calculate</button>
+
+            </form>
+
+            <p id="calculator-result" aria-live="polite">
+                Result will appear here.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>Week 4 JavaScript Fundamentals Project</p>
+
+    </footer>
 
 </body>
 </html>
-
