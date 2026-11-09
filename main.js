@@ -225,3 +225,136 @@ console.log("Tip for KSh 2000:", calculateTip(2000, 20));
 // Calculate tip using 10%
 console.log("Tip for KSh 500:", calculateTip(500, 10));
 
+
+// TASK 7.4 - EXERCISE 1: IF/ELSE STATEMENTS
+
+function getGrade(score) {
+    if (score >= 90) {
+        return "A";
+    } else if (score >= 80) {
+        return "B";
+    } else if (score >= 70) {
+        return "C";
+    } else if (score >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
+}
+
+// Testing the function
+console.log("My grade:", getGrade(85));
+console.log("Student grade:", getGrade(95));
+console.log("Another grade:", getGrade(55));
+
+
+// TASK 7.4 - EXERCISE 2: SWITCH STATEMENTS
+
+function getDayName(dayNumber) {
+    switch (dayNumber) {
+        case 0:
+            return "Sunday";
+        case 1:
+            return "Monday";
+        case 2:
+            return "Tuesday";
+        case 3:
+            return "Wednesday";
+        case 4:
+            return "Thursday";
+        case 5:
+            return "Friday";
+        case 6:
+            return "Saturday";
+        default:
+            return "Invalid day";
+    }
+}
+
+console.log("Today is:", getDayName(1));
+console.log("Day number 5:", getDayName(5));
+console.log("Day number 8:", getDayName(8));
+
+
+// FOR LOOP
+
+for (let i = 0; i < 5; i++) {
+    console.log("For loop:", i);
+}
+
+
+// WHILE LOOP
+
+let count = 0;
+
+while (count < 5) {
+    console.log("While loop:", count);
+    count++;
+}
+
+
+// FOR...OF LOOP
+
+const colors = ["Black", "White", "Blue"];
+
+for (const color of colors) {
+    console.log("My favourite colours:", color);
+}
+
+
+// PRINT NUMBERS FROM 1 TO 100
+
+console.log("Numbers from 1 to 100:");
+
+for (let i = 1; i <= 100; i++) {
+    console.log(i);
+}
+
+
+// PRINT EVEN NUMBERS FROM 1 TO 50
+
+console.log("Even numbers from 1 to 50:");
+
+for (let i = 1; i <= 50; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
+    }
+}
+
+
+// FIZZBUZZ CHALLENGE
+
+console.log("FizzBuzz:");
+
+for (let i = 1; i <= 100; i++) {
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+
+    } else if (i % 3 === 0) {
+        console.log("Fizz");
+
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+
+    } else {
+        console.log(i);
+    }
+}
+
+
+// STAR TRIANGLE CHALLENGE
+
+console.log("My Star Triangle:");
+
+for (let i = 1; i <= 5; i++) {
+
+    let stars = "";
+
+    for (let j = 1; j <= i; j++) {
+        stars += "*";
+    }
+
+    console.log(stars);
+}
+
