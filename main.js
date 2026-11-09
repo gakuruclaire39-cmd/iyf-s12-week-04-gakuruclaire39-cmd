@@ -557,3 +557,151 @@ const product = values4.reduce((total, num) => total * num, 1);
 console.log("Numbers:", values4);
 
 console.log("Product of all numbers:", product);
+
+
+// ======================================
+// TASK 8.2 - EXERCISE 1: OBJECT BASICS
+// Created by: Claire Gakuru
+// ======================================
+
+// Creating my personal object
+const person = {
+    firstName: "Claire",
+    lastName: "Gakuru",
+    age: 19,
+    isStudent: true,
+    hobbies: ["learning", "coding", "reading"],
+    address: {
+        city: "Nairobi",
+        country: "Kenya"
+    }
+};
+
+// Accessing object properties
+
+// Dot notation
+console.log("First name:", person.firstName);
+
+// Bracket notation
+console.log("Last name:", person["lastName"]);
+
+// Accessing nested objects
+console.log("My city:", person.address.city);
+
+// Accessing hobbies
+console.log("My hobbies:", person.hobbies);
+
+// Modifying properties
+person.age = 20;
+
+console.log("Updated age:", person.age);
+
+// Adding a new property
+person.phone = "0700000000";
+
+console.log("Phone number:", person.phone);
+
+// Removing a property
+delete person.isStudent;
+
+console.log("Updated person object:", person);
+
+
+// ======================================
+// TASK 8.2 - EXERCISE 2: OBJECT METHODS
+// ======================================
+
+const calculator = {
+
+    // Function expression
+    add: function(a, b) {
+        return a + b;
+    },
+
+    // Shorthand method syntax
+    subtract(a, b) {
+        return a - b;
+    },
+
+    // Arrow function
+    multiply: (a, b) => a * b,
+
+    // Division method
+    divide(a, b) {
+        if (b === 0) {
+            return "Cannot divide by zero";
+        }
+
+        return a / b;
+    }
+};
+
+// Testing calculator methods
+
+console.log("Addition:", calculator.add(5, 3));
+
+console.log("Subtraction:", calculator.subtract(10, 4));
+
+console.log("Multiplication:", calculator.multiply(5, 3));
+
+console.log("Division:", calculator.divide(20, 4));
+
+console.log("Division by zero:", calculator.divide(10, 0));
+
+
+// ======================================
+// TASK 8.2 - EXERCISE 3: OBJECT ITERATION
+// ======================================
+
+// Creating a scores object
+const scores = {
+    mathematics: 85,
+    english: 90,
+    science: 88
+};
+
+// 1. Get object keys
+console.log("Subjects:", Object.keys(scores));
+
+// 2. Get object values
+console.log("Marks:", Object.values(scores));
+
+// 3. Get object entries
+console.log("Subject entries:", Object.entries(scores));
+
+// 4. Loop through the object
+for (const [subject, score] of Object.entries(scores)) {
+
+    console.log(`${subject}: ${score}`);
+}
+
+
+// BONUS EXERCISE: MY STUDENT OBJECT
+
+const myStudent = {
+    name: "Claire Gakuru",
+    age: 19,
+    course: "JavaScript Fundamentals",
+    marks: {
+        mathematics: 85,
+        english: 90,
+        science: 88
+    },
+
+    // Calculate average marks
+    calculateAverage() {
+        const marks = Object.values(this.marks);
+
+        const total = marks.reduce((sum, mark) => sum + mark, 0);
+
+        return total / marks.length;
+    }
+};
+
+console.log("Student name:", myStudent.name);
+
+console.log("Course:", myStudent.course);
+
+console.log("My marks:", myStudent.marks);
+
+console.log("Average marks:", myStudent.calculateAverage());
