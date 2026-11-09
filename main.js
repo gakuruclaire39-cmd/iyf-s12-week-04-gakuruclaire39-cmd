@@ -437,3 +437,123 @@ console.log("Power:", calculate(10, "**", 2));
 console.log("Invalid operator:", calculate(10, "&", 5));
 
 console.log("===== CALCULATOR COMPLETE =====");
+
+
+// ======================================
+// TASK 8.1 - EXERCISE 1: ARRAY BASICS
+// Created by: Claire Gakuru
+// ======================================
+
+// Creating arrays
+const fruits = ["apple", "banana", "orange"];
+
+const numbers = [1, 2, 3, 4, 5];
+
+const mixed = ["Hello", 42, true, null];
+
+// My favourite colour
+const favoriteColors = ["Black"];
+
+// Accessing array elements
+console.log("First fruit:", fruits[0]);
+
+console.log("Number of fruits:", fruits.length);
+
+console.log("My favourite colour:", favoriteColors[0]);
+
+// Modifying arrays
+fruits.push("grape");
+
+console.log("After push:", fruits);
+
+fruits.unshift("mango");
+
+console.log("After unshift:", fruits);
+
+fruits.pop();
+
+console.log("After pop:", fruits);
+
+fruits.shift();
+
+console.log("After shift:", fruits);
+
+// Display mixed array
+console.log("Mixed array:", mixed);
+
+
+// ======================================
+// TASK 8.1 - EXERCISE 2: ARRAY METHODS
+// ======================================
+
+const numbers = [1, 2, 3, 4, 5];
+
+// 1. forEach - display each number multiplied by 2
+numbers.forEach(num => {
+    console.log("Doubled:", num * 2);
+});
+
+// 2. map - create a new array with doubled numbers
+const doubled = numbers.map(num => num * 2);
+
+console.log("Doubled array:", doubled);
+
+// 3. filter - get even numbers
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+
+console.log("Even numbers:", evenNumbers);
+
+// 4. find - get the first even number
+const firstEven = numbers.find(num => num % 2 === 0);
+
+console.log("First even number:", firstEven);
+
+// 5. reduce - calculate the sum
+const sum = numbers.reduce((total, num) => total + num, 0);
+
+console.log("Sum of numbers:", sum);
+
+// 6. includes - check if a number exists
+console.log("Does the array include 3?", numbers.includes(3));
+
+
+// CHALLENGE 1: DOUBLE ALL NUMBERS
+
+const values = [2, 4, 6, 8, 10];
+
+const doubledValues = values.map(num => num * 2);
+
+console.log("Original numbers:", values);
+
+console.log("Doubled numbers:", doubledValues);
+
+
+// CHALLENGE 2: FILTER NEGATIVE NUMBERS
+
+const values2 = [-5, 10, -2, 8, -9, 15];
+
+const positiveNumbers = values2.filter(num => num >= 0);
+
+console.log("Original numbers:", values2);
+
+console.log("Non-negative numbers:", positiveNumbers);
+
+
+// CHALLENGE 3: FIND FIRST NUMBER GREATER THAN 10
+
+const values3 = [3, 7, 12, 18, 25];
+
+const firstGreaterThan10 = values3.find(num => num > 10);
+
+console.log("First number greater than 10:", firstGreaterThan10);
+
+
+// CHALLENGE 4: PRODUCT OF ALL NUMBERS
+
+const values4 = [2, 3, 4, 5];
+
+const product = values4.reduce((total, num) => total * num, 1);
+
+console.log("Numbers:", values4);
+
+console.log("Product of all numbers:", product);
