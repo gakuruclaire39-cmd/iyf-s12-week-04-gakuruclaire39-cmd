@@ -117,3 +117,111 @@ console.log("My age is:", myAge);
 console.log("My age in approximately days:", ageInDays);
 console.log("My age in approximately hours:", ageInHours);
 console.log("I will turn 100 in:", yearTurning100);
+
+
+// TASK 7.3: EXERCISE 1 - FUNCTION DECLARATIONS
+
+// 1. Function declaration
+function greet(name) {
+    return `Hello, ${name}!`;
+}
+
+console.log(greet("Claire"));
+
+// 2. Function expression
+const add = function(a, b) {
+    return a + b;
+};
+
+console.log("Addition:", add(10, 5));
+
+// 3. Arrow function
+const multiply = (a, b) => a * b;
+
+console.log("Multiplication:", multiply(4, 5));
+
+// 4. Arrow function with a body
+const divide = (a, b) => {
+    if (b === 0) {
+        return "Cannot divide by zero";
+    }
+    return a / b;
+};
+
+console.log("Division:", divide(20, 4));
+
+
+// TASK 7.3: EXERCISE 2 - BUILD FUNCTIONS
+
+// 1. Calculate area of a rectangle
+function calculateArea(width, height) {
+    return width * height;
+}
+
+console.log("Rectangle area:", calculateArea(10, 5));
+
+
+// 2. Convert Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+    return (celsius * 9/5) + 32;
+}
+
+console.log("Temperature:", celsiusToFahrenheit(25), "°F");
+
+
+// 3. Check if a number is even
+function isEven(number) {
+    return number % 2 === 0;
+}
+
+console.log("Is 19 even?", isEven(19));
+
+
+// 4. Get initials from full name
+function getInitials(fullName) {
+    return fullName
+        .split(" ")
+        .map(name => name[0])
+        .join("")
+        .toUpperCase();
+}
+
+console.log("My initials:", getInitials("Claire Gakuru"));
+
+
+// 5. Reverse a string
+function reverseString(str) {
+    return str.split("").reverse().join("");
+}
+
+console.log("My name reversed:", reverseString("Claire"));
+
+
+// TASK 7.3: EXERCISE 3 - DEFAULT PARAMETERS
+
+function greetWithDefault(name = "Guest", greeting = "Hello") {
+    return `${greeting}, ${name}!`;
+}
+
+console.log(greetWithDefault());
+
+console.log(greetWithDefault("Claire"));
+
+console.log(greetWithDefault("Claire", "Welcome"));
+
+
+// TASK 7.3: EXERCISE 4 - TIP CALCULATOR
+
+function calculateTip(bill, tipPercent = 15) {
+    return bill * (tipPercent / 100);
+}
+
+// Calculate tip using default 15%
+console.log("Tip for KSh 1000:", calculateTip(1000));
+
+// Calculate tip using 20%
+console.log("Tip for KSh 2000:", calculateTip(2000, 20));
+
+// Calculate tip using 10%
+console.log("Tip for KSh 500:", calculateTip(500, 10));
+
