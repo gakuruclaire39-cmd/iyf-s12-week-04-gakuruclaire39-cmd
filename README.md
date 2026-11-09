@@ -22,6 +22,15 @@ This project is about learning the basics of JavaScript and understanding how it
 7. Identifies students who need academic improvement.
 8. Generates student report cards.
 
+## Project Structure
+```
+iyf-s12-week-04-gakuruclaire39-cmd/
+├── .gitignore
+├── index.html
+├── main.js
+└── README.md
+```
+
 ## How to Run
 1. Clone the repository from GitHub.
 2. Open the project folder in Visual Studio Code.
