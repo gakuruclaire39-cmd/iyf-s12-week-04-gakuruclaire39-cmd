@@ -705,3 +705,75 @@ console.log("Course:", myStudent.course);
 console.log("My marks:", myStudent.marks);
 
 console.log("Average marks:", myStudent.calculateAverage());
+
+
+// ==========================================
+// TASK 8.3: ARRAY OF OBJECTS
+// Created by: Claire Gakuru
+// ==========================================
+
+// Creating an array of student objects
+
+const students = [
+    { name: "Claire Gakuru", age: 19, grade: 85, major: "Computer Science" },
+    { name: "Brian Kamau", age: 20, grade: 72, major: "Mathematics" },
+    { name: "Mary Wanjiku", age: 23, grade: 90, major: "Computer Science" },
+    { name: "Peter Mwangi", age: 21, grade: 88, major: "Physics" },
+    { name: "Faith Achieng", age: 22, grade: 95, major: "Computer Science" }
+];
+
+// 1. Get all student names
+const names = students.map(student => student.name);
+
+console.log("All student names:", names);
+
+
+// 2. Get students with grade greater than 80
+const highAchievers = students.filter(student => student.grade > 80);
+
+console.log("High achievers:", highAchievers);
+
+
+// 3. Find the student named Claire Gakuru
+const claire = students.find(student => student.name === "Claire Gakuru");
+
+console.log("Student found:", claire);
+
+
+// 4. Calculate average grade
+const avgGrade = students.reduce(
+    (total, student) => total + student.grade, 0
+) / students.length;
+
+console.log("Average grade:", avgGrade);
+
+
+// 5. Get Computer Science majors only
+const csMajors = students.filter(student => student.major === "Computer Science");
+
+console.log("Computer Science students:", csMajors);
+
+
+// 6. Sort students by grade (highest first)
+const sortedByGrade = [...students].sort(
+    (a, b) => b.grade - a.grade
+);
+
+console.log("Students sorted by grade:", sortedByGrade);
+
+
+// 7. Check if any student has grade greater than 90
+const hasTopStudent = students.some(student => student.grade > 90);
+
+console.log("Is there a student above 90?", hasTopStudent);
+
+
+// 8. Check if all students are passing
+const allPassing = students.every(student => student.grade >= 60);
+
+console.log("Are all students passing?", allPassing);
+
+
+// END OF TASK 8.3
+
+
