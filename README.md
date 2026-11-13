@@ -28,6 +28,7 @@ iyf-s12-week-04-gakuruclaire39-cmd/
 ├── .gitignore
 ├── index.html
 ├── main.js
+├──daily-challenges.js
 └── README.md
 ```
 
